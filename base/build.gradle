@@ -1,0 +1,26 @@
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    compile "org.jetbrains.kotlinx:kotlinx-coroutines-core:$ktx"
+    compile "io.ktor:ktor-server-netty:$ktor_version"
+    compile "io.ktor:ktor-network:$ktor_version"
+}
+
+task fatJar(type: Jar) {
+    archiveName = rootProject.name + "-base-" + version + ".jar"
+    manifest {
+        attributes 'Implementation-Version' : "$version"
+    }
+}
+
+task assembleJar(type: Copy) {
+    from fatJar
+    into jarDir
+}
+
+kotlin {
+    experimental {
+        coroutines "enable"
+    }
+}
+
+build.dependsOn assembleJar
