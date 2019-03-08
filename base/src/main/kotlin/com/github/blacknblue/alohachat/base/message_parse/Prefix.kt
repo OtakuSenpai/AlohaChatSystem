@@ -1,4 +1,4 @@
-package com.github.otakusenpai.alohachat.base.message_parse
+package com.github.blacknblue.alohachat.base.message_parse
 
 // Nick@IP together is called Prefix
 
