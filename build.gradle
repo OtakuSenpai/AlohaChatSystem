@@ -1,4 +1,5 @@
 apply plugin: 'kotlin'
+apply plugin: 'java'
 
 buildscript {
     ext.kotlin_version = '1.3.21'
@@ -59,7 +60,7 @@ allprojects {
 task fatJar(type: Jar) {
     archiveName = rootProject.name + "-" + version + ".jar"
     manifest {
-        attributes 'Main-Class' : 'com.github.otakusenpai.AlohaChat.MainKt'
+        attributes 'Main-Class' : 'com.github.blacknblue.AlohaChat.MainKt'
     }
 }
 
