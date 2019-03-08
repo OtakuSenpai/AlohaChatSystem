@@ -1,4 +1,4 @@
-package com.github.otakusenpai.alohachat.base.connection
+package com.github.blacknblue.alohachat.base.connection
 
 import io.ktor.network.selector.ActorSelectorManager
 import io.ktor.network.sockets.*

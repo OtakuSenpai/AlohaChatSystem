@@ -1,4 +1,4 @@
-package com.github.otakusenpai.alohachat.base.message_parse
+package com.github.blacknblue.alohachat.base.message_parse
 
 // ReceiverPrefix Numeric ChannelMsg SenderPrefix Data
 // ReceiverPrefix Numeric ChannelMsg Channel Data
@@ -33,15 +33,21 @@ class ChatMsg {
 
 
         if(list[2].compareTo("0") == 0) {
-            receiverPrefix = Prefix(list[0],false)
+            receiverPrefix = Prefix(list[0], false)
             numeric = retNumeric(list[1].toInt())
             senderPrefix = Prefix(list[3], false)
         } else if(list[2].compareTo("0") != 0) {
-            receiverPrefix = Prefix(list[0],true)
+            receiverPrefix = Prefix(list[0], true)
             numeric = retNumeric(list[1].toInt())
             senderPrefix = Prefix(list[3], true)
         }
-        msgdata = MsgData(numeric,channelMsg,senderPrefix,receiverPrefix,data)
+        msgdata = MsgData(
+            numeric,
+            channelMsg,
+            senderPrefix,
+            receiverPrefix,
+            data
+        )
     }
 
     var msgdata = MsgData()

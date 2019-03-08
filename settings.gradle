@@ -1,3 +1,5 @@
 rootProject.name = 'AlohaChat'
 include 'base'
+include 'client'
+include 'server'
 
