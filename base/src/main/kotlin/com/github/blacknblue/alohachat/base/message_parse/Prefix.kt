@@ -3,25 +3,24 @@ package com.github.blacknblue.alohachat.base.message_parse
 // Nick@IP together is called Prefix
 
 class Prefix() {
-    constructor(data: String, channelMsg: Boolean) : this() {
+    constructor(data: String) : this() {
         originalPrefix = data
-        parse(data, channelMsg)
+        parse(data)
     }
 
-    fun parse(data: String, channelMsg: Boolean) {
-        if(!channelMsg) {
-            var wordList = data.split('@')
-            nick = wordList[0]
-            ip = wordList[1]
-        } else {
-            nick = data
-            ip = ""
-        }
+    fun parse(data: String) {
+        var temp = data
+        nick = temp.substring(0,temp.indexOf('@'))
+        temp = temp.substring(temp.indexOf('@') + 1,temp.length)
+        ip = temp.substring(0, temp.indexOf(':'))
+        temp = temp.substring(temp.indexOf(':') + 1,temp.length)
+        port  = temp
     }
 
     fun getData() : String = originalPrefix
 
     lateinit var nick: String    // Nick string is the name of the person sending it, eg: Neel
     lateinit var ip: String      // IP is ip of the person sending it
+    lateinit var port: String    // Port number
     private lateinit var originalPrefix: String
 }
