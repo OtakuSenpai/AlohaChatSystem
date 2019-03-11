@@ -6,22 +6,22 @@ import com.github.blacknblue.alohachat.base.message_parse.Prefix
 class GroupChannel(ownPrefix: Prefix) : Channel(ownPrefix) {
 
     fun addPPL(prefix: Prefix) {
-        groupPPL.add(prefix)
+        receiverGroupPPL.add(prefix)
     }
 
     fun ifPplIsThere(prefix: Prefix): Boolean {
         var found = false
-        for(i in groupPPL) {
+        for(i in receiverGroupPPL) {
             if(matchPrefix(i,prefix)) found = true
         }
         return found
     }
 
     fun removePPL(prefix: Prefix) {
-        groupPPL.remove(prefix)
+        receiverGroupPPL.remove(prefix)
     }
 
     // List of Prefixes in Group
-    // Acts as a Sender Prefix list
-    var groupPPL = MutableList(0) { Prefix() }
+    // Acts as a receiver Prefix list
+    var receiverGroupPPL = MutableList(0) { Prefix() }
 }

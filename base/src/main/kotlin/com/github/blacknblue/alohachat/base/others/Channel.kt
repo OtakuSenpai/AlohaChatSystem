@@ -5,5 +5,5 @@ import com.github.blacknblue.alohachat.base.message_parse.Prefix
 
 abstract class Channel(ownPrefix: Prefix) {
     var messageList = KtQueue()
-    var receiverPrefix = ownPrefix
+    var senderPrefix = ownPrefix
 }
