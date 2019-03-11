@@ -2,19 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="319b6562-c728-4d7e-aa36-8fde88c87e2c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/others/Channel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/AlohaChatSystem.iws" beforeDir="false" afterPath="$PROJECT_DIR$/AlohaChatSystem.iws" afterDir="false" />
-=======
+      <change beforePath="$PROJECT_DIR$/base/com.github.otakusenpai.alohachat.base.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/base/com.github.otakusenpai.alohachat.base.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/com.github.otakusenpai.alohachat.base.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/base/com.github.otakusenpai.alohachat.base.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/message_parse/ChatMsg.kt" beforeDir="false" afterPath="$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/message_parse/ChatMsg.kt" afterDir="false" />
->>>>>>> 73313c419e1dd13202df1759dcbafc6a48d7dfee
       <change beforePath="$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/message_parse/Prefix.kt" beforeDir="false" afterPath="$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/message_parse/Prefix.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/message_parse/helpers.kt" beforeDir="false" afterPath="$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/helpers/helpers.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/com.github.otakusenpai.alohachat.client.client.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/client/com.github.otakusenpai.alohachat.client.client.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/com.github.otakusenpai.alohachat.client.client.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/client/com.github.otakusenpai.alohachat.client.client.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.github.otakusenpai.alohachat.AlohaChat.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/com.github.otakusenpai.alohachat.AlohaChat.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.github.otakusenpai.alohachat.AlohaChat.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/com.github.otakusenpai.alohachat.AlohaChat.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/com.github.otakusenpai.alohachat.server.server.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/server/com.github.otakusenpai.alohachat.server.server.main.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -45,25 +49,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/message_parse/ChatMsg.kt">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
             <state relative-caret-position="251">
-              <caret line="68" column="15" selection-start-line="68" selection-start-column="15" selection-end-line="68" selection-end-column="15" />
-=======
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+              <caret line="46" column="23" lean-forward="true" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+              <folding>
+                <element signature="e#60#243#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/helpers/helpers.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="356">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/message_parse/helpers.kt">
+        <entry file="file://$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/others/Channel.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
->>>>>>> 73313c419e1dd13202df1759dcbafc6a48d7dfee
+            <state relative-caret-position="75">
+              <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+              <folding>
+                <element signature="e#53#262#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/others/GroupChannel.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
+              <folding>
+                <element signature="e#53#181#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/helpers/KtQueue.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -71,13 +106,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/message_parse/Prefix.kt">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="240">
-              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-=======
-            <state relative-caret-position="285">
-              <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
->>>>>>> 73313c419e1dd13202df1759dcbafc6a48d7dfee
+            <state relative-caret-position="281">
+              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -100,9 +130,12 @@
         <option value="$PROJECT_DIR$/client/build.gradle" />
         <option value="$PROJECT_DIR$/server/build.gradle" />
         <option value="$PROJECT_DIR$/settings.gradle" />
-        <option value="$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/message_parse/helpers.kt" />
-        <option value="$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/message_parse/ChatMsg.kt" />
+        <option value="$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/others/Channel.kt" />
         <option value="$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/message_parse/Prefix.kt" />
+        <option value="$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/helpers/helpers.kt" />
+        <option value="$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/others/GroupChannel.kt" />
+        <option value="$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/helpers/KtQueue.kt" />
+        <option value="$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/message_parse/ChatMsg.kt" />
       </list>
     </option>
   </component>
@@ -169,7 +202,27 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
               <item name="base" type="462c0819:PsiDirectoryNode" />
+              <item name="helpers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AlohaChatSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AlohaChatSystem" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="base" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
               <item name="message_parse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AlohaChatSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AlohaChatSystem" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="base" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+              <item name="others" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -179,17 +232,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
-<<<<<<< HEAD
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552337841948" />
-=======
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552335728976" />
->>>>>>> 73313c419e1dd13202df1759dcbafc6a48d7dfee
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552345186173" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/server" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/helpers" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -214,20 +268,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="31" width="1326" height="607" extended-state="0" />
+    <frame x="0" y="31" width="1326" height="607" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2535211" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-<<<<<<< HEAD
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
-=======
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="Capture Tool" order="4" />
->>>>>>> 73313c419e1dd13202df1759dcbafc6a48d7dfee
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -240,11 +288,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-<<<<<<< HEAD
       <window_info anchor="bottom" id="Build" order="10" visible="true" weight="0.32848233" />
-=======
-      <window_info anchor="bottom" id="Build" order="10" weight="0.32848233" />
->>>>>>> 73313c419e1dd13202df1759dcbafc6a48d7dfee
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -278,36 +322,54 @@
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/message_parse/Prefix.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-=======
-    <entry file="file://$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/message_parse/helpers.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+        <state relative-caret-position="281">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/message_parse/Prefix.kt">
+    <entry file="file://$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/helpers/KtQueue.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
->>>>>>> 73313c419e1dd13202df1759dcbafc6a48d7dfee
+        <state relative-caret-position="360">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/message_parse/ChatMsg.kt">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="251">
-          <caret line="68" column="15" selection-start-line="68" selection-start-column="15" selection-end-line="68" selection-end-column="15" />
-=======
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
->>>>>>> 73313c419e1dd13202df1759dcbafc6a48d7dfee
+          <caret line="46" column="23" lean-forward="true" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+          <folding>
+            <element signature="e#60#243#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/others/Channel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+          <folding>
+            <element signature="e#53#262#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/others/GroupChannel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
+          <folding>
+            <element signature="e#53#181#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/src/main/kotlin/com/github/blacknblue/alohachat/base/helpers/helpers.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
         </state>
       </provider>
     </entry>
