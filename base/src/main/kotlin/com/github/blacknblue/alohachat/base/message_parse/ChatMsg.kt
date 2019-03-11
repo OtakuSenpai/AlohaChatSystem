@@ -1,9 +1,14 @@
 package com.github.blacknblue.alohachat.base.message_parse
 
-class ChatMsg {
-    constructor(msg: String) {
-        originalMsg = msg
+import com.github.blacknblue.alohachat.base.helpers.MsgData
+import com.github.blacknblue.alohachat.base.helpers.Numerics
+import com.github.blacknblue.alohachat.base.helpers.retNumeric
 
+class ChatMsg() {
+
+    constructor(msg: String) :  this() {
+        originalMsg = msg
+        parse(originalMsg)
     }
 
     fun parse(data: String) {
@@ -13,41 +18,35 @@ class ChatMsg {
         var receiverPrefix = Prefix()
         var numeric = Numerics.None
         var channelMsg = false
-        var data = ""
+        var actualData = ""
 
-        for(i in  datalist)
-            data = "$i $data"
+        // Arghya@193.33.34.54:34000 0 1 Avraneel@98.54.33.22:34000 : Hello
 
-
-        if(list[2].compareTo("0") == 0) {
-            receiverPrefix = Prefix(list[0], false)
+        if(list.size > 4) {
+            receiverPrefix = Prefix(list[0])
             numeric = retNumeric(list[1].toInt())
-            senderPrefix = Prefix(list[3], false)
-        } else if(list[2].compareTo("0") != 0) {
-            receiverPrefix = Prefix(list[0], true)
-            numeric = retNumeric(list[1].toInt())
-            senderPrefix = Prefix(list[3], true)
+            channelMsg = (list[2].toInt() == 1)
+            senderPrefix = Prefix(list[3])
+
+            if(list[4] == ":") {
+                for(i in 4 until list.size)
+                    actualData += list[i]
+            } else throw Exception("Error in Base module : Error in parsing message!!!")
+
+            msgdata = MsgData(
+                numeric,
+                channelMsg,
+                senderPrefix,
+                receiverPrefix,
+                actualData
+            )
         }
-        msgdata = MsgData(
-            numeric,
-            channelMsg,
-            senderPrefix,
-            receiverPrefix,
-            data
-        )
+        else throw Exception("Error in Base module : Error in parsing message!!!")
     }
 
     var msgdata = MsgData()
-    lateinit var originalMsg: String
+    var originalMsg: String = ""
 }
-
-data class MsgData(
-    val numeric: Numerics = Numerics.None,               // Type of message(Join = 0, Quit = 1, PrivMsg = 2, NickChange = 3
-    val channelMsg: Boolean = false      // True for Channel message broadcast, then no senderIP
-    val senderPrefix: Prefix = Prefix(),
-    val receiverPrefix: Prefix = Prefix(),
-    val data: String = String()          // Data is the string to be send
-)
 
 
 
