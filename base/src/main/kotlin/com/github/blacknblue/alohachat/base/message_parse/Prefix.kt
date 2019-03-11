@@ -9,14 +9,12 @@ class Prefix() {
     }
 
     fun parse(data: String, channelMsg: Boolean) {
-        if(!channelMsg) {
-            var wordList = data.split('@')
-            nick = wordList[0]
-            ip = wordList[1]
-        } else {
-            nick = data
-            ip = ""
-        }
+        var temp = data
+        nick = temp.substring(0,temp.indexOf('@'))
+        temp = temp.substring(temp.indexOf('@') + 1,temp.length)
+        ip = temp.substring(0,temp.indexOf(':'))
+        temp = temp.substring(temp.indexOf(':') + 1,temp.length)
+        port = ip
     }
 
     fun getData() : String = originalPrefix
