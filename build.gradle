@@ -18,13 +18,6 @@ buildscript {
 
 sourceCompatibility = 1.8
 
-dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    compile "org.jetbrains.kotlinx:kotlinx-coroutines-core:$ktx"
-    compile "io.ktor:ktor-server-netty:$ktor_version"
-    compile "io.ktor:ktor-network:$ktor_version"
-}
-
 allprojects {
     apply plugin: 'kotlin'
 
@@ -34,7 +27,6 @@ allprojects {
     version = "0.1"
 
     repositories {
-        jcenter()
         mavenCentral()
         maven { url "https://dl.bintray.com/kotlin/kotlin-dev" }
         maven { url "https://dl.bintray.com/kotlin/kotlin-eap" }
@@ -44,7 +36,11 @@ allprojects {
     dependencies {
         compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
         compile "org.jetbrains.kotlinx:kotlinx-coroutines-core:$ktx"
+        compile "io.ktor:ktor-server-netty:$ktor_version"
+        compile "io.ktor:ktor-network:$ktor_version"
+        compile "org.jetbrains.kotlinx:kotlinx-coroutines-core:$ktx"
     }
+
 
     compileKotlin {
         kotlinOptions.jvmTarget = "1.8"
@@ -55,18 +51,6 @@ allprojects {
             coroutines "enable"
         }
     }
-}
-
-task fatJar(type: Jar) {
-    archiveName = rootProject.name + "-" + version + ".jar"
-    manifest {
-        attributes 'Main-Class' : 'com.github.blacknblue.AlohaChat.MainKt'
-    }
-}
-
-task assembleJar(type: Copy) {
-    from fatJar
-    into jarDir
 }
 
 task wrapper(type: Wrapper) {
