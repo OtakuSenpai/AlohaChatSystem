@@ -17,6 +17,28 @@ class Prefix() {
         port  = temp
     }
 
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as Prefix
+
+        if (nick != other.nick) return false
+        if (ip != other.ip) return false
+        if (port != other.port) return false
+        if (originalPrefix != other.originalPrefix) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        var result = nick.hashCode()
+        result = 31 * result + ip.hashCode()
+        result = 31 * result + port.hashCode()
+        result = 31 * result + originalPrefix.hashCode()
+        return result
+    }
+
     lateinit var nick: String    // Nick string is the name of the person sending it, eg: Neel
     lateinit var ip: String      // IP is ip of the person sending it
     lateinit var port: String    // Port number

@@ -16,7 +16,7 @@ compileKotlin {
 }
 
 task fatJar(type: Jar) {
-    archiveName = rootProject.name + "-" + version + ".jar"
+    archiveName = rootProject.name + "-server-" + version + ".jar"
     manifest {
         attributes 'Main-Class' : 'com.github.blacknblue.AlohaChat.MainKt'
     }

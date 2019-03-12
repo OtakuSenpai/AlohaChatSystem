@@ -33,6 +33,5 @@ data class MsgData(
 
 // Functions
 
-fun matchPrefix(prefix1: Prefix, prefix2: Prefix): Boolean = (prefix1.nick == prefix2.nick && prefix1.ip == prefix2.ip &&
-            prefix1.port == prefix2.port && prefix1.originalPrefix == prefix2.originalPrefix)
+fun matchPrefix(prefix1: Prefix, prefix2: Prefix): Boolean = prefix1 == prefix2
 
