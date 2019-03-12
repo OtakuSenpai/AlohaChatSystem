@@ -10,7 +10,7 @@ import java.nio.charset.StandardCharsets
 
 class BasicConnection: Connection {
 
-    constructor(Port: Int = 6667,Address: String): super() {
+    constructor(Port: Int,Address: String): super() {
         runBlocking {
             try {
                 port = Port

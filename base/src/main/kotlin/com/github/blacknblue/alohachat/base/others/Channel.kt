@@ -9,7 +9,7 @@ abstract class Channel() {
         senderPrefix = ownPrefix
     }
 
-    fun matchChannels(other: Channel): Boolean = (this.senderPrefix == other.senderPrefix)
+    fun matchChannels(other: Channel): Boolean = this.senderPrefix == other.senderPrefix
 
     var messageList = KtQueue()
     var senderPrefix = Prefix()
