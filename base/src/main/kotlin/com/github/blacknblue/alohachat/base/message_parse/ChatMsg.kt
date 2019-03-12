@@ -30,7 +30,7 @@ class ChatMsg() {
 
             if(list[4] == ":") {
                 for(i in 4 until list.size)
-                    actualData += list[i]
+                    actualData = actualData + " " + list[i]
             } else throw Exception("Error in Base module : Error in parsing message!!!")
 
             msgdata = MsgData(
@@ -42,6 +42,14 @@ class ChatMsg() {
             )
         }
         else throw Exception("Error in Base module : Error in parsing message!!!")
+    }
+
+    fun print() {
+        println("Receiver Address: ${msgdata.receiverPrefix.originalPrefix}")
+        println("Sender Address: ${msgdata.senderPrefix.originalPrefix}")
+        println("Msg TYPE: ${msgdata.numeric}")
+        println("Chat or DM: ${msgdata.channelMsg}")
+        println("Data: ${msgdata.data} ")
     }
 
     var msgdata = MsgData()
