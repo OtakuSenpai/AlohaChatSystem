@@ -1,4 +1,4 @@
-package com.github.blacknblue.alohachat.base
+package com.github.otakusenpai.alohachat.base
 
 import com.github.blacknblue.alohachat.base.message_parse.ChatMsg
 

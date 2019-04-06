@@ -1,3 +1,5 @@
+package com.github.otakusenpai.alohachat.server
+
 import com.github.blacknblue.alohachat.base.connection.BasicConnection
 import com.github.blacknblue.alohachat.base.helpers.matchPrefix
 import com.github.blacknblue.alohachat.base.message_parse.ChatMsg
@@ -5,6 +7,7 @@ import com.github.blacknblue.alohachat.base.others.Channel
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.runBlocking
+import segragateInput
 
 object AlohaServ {
 

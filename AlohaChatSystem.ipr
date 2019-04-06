@@ -2,6 +2,12 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="AlohaChat.base.main" target="1.8" />
+      <module name="AlohaChat.base.test" target="1.8" />
+      <module name="AlohaChat.client.main" target="11" />
+      <module name="AlohaChat.client.test" target="11" />
+      <module name="AlohaChat.server.main" target="1.8" />
+      <module name="AlohaChat.server.test" target="1.8" />
       <module name="com.github.otakusenpai.alohachat..client.main" target="1.8" />
       <module name="com.github.otakusenpai.alohachat..client.test" target="1.8" />
       <module name="com.github.otakusenpai.alohachat.AlohaChat.main" target="1.8" />
@@ -16,7 +22,6 @@
       <module name="com.github.otakusenpai.alohachat.server.server.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
-  <component name="Encoding" addBOMForNewFiles="with NO BOM" />
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
@@ -55,22 +60,22 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/base/AlohaChat.base.iml" filepath="$PROJECT_DIR$/base/AlohaChat.base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base/AlohaChat.base.main.iml" filepath="$PROJECT_DIR$/base/AlohaChat.base.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base/AlohaChat.base.test.iml" filepath="$PROJECT_DIR$/base/AlohaChat.base.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/client/AlohaChat.client.iml" filepath="$PROJECT_DIR$/client/AlohaChat.client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/client/AlohaChat.client.main.iml" filepath="$PROJECT_DIR$/client/AlohaChat.client.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/client/AlohaChat.client.test.iml" filepath="$PROJECT_DIR$/client/AlohaChat.client.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/AlohaChat.server.iml" filepath="$PROJECT_DIR$/server/AlohaChat.server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/AlohaChat.server.main.iml" filepath="$PROJECT_DIR$/server/AlohaChat.server.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/AlohaChat.server.test.iml" filepath="$PROJECT_DIR$/server/AlohaChat.server.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.github.otakusenpai.alohachat.AlohaChat.iml" filepath="$PROJECT_DIR$/com.github.otakusenpai.alohachat.AlohaChat.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.github.otakusenpai.alohachat.AlohaChat.main.iml" filepath="$PROJECT_DIR$/com.github.otakusenpai.alohachat.AlohaChat.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.github.otakusenpai.alohachat.AlohaChat.test.iml" filepath="$PROJECT_DIR$/com.github.otakusenpai.alohachat.AlohaChat.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/base/com.github.otakusenpai.alohachat.base.iml" filepath="$PROJECT_DIR$/base/com.github.otakusenpai.alohachat.base.iml" />
-      <module fileurl="file://$PROJECT_DIR$/base/com.github.otakusenpai.alohachat.base.main.iml" filepath="$PROJECT_DIR$/base/com.github.otakusenpai.alohachat.base.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/base/com.github.otakusenpai.alohachat.base.test.iml" filepath="$PROJECT_DIR$/base/com.github.otakusenpai.alohachat.base.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/client/com.github.otakusenpai.alohachat.client.client.iml" filepath="$PROJECT_DIR$/client/com.github.otakusenpai.alohachat.client.client.iml" />
-      <module fileurl="file://$PROJECT_DIR$/client/com.github.otakusenpai.alohachat.client.client.main.iml" filepath="$PROJECT_DIR$/client/com.github.otakusenpai.alohachat.client.client.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/client/com.github.otakusenpai.alohachat.client.client.test.iml" filepath="$PROJECT_DIR$/client/com.github.otakusenpai.alohachat.client.client.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/server/com.github.otakusenpai.alohachat.server.iml" filepath="$PROJECT_DIR$/server/com.github.otakusenpai.alohachat.server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/server/com.github.otakusenpai.alohachat.server.server.iml" filepath="$PROJECT_DIR$/server/com.github.otakusenpai.alohachat.server.server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/server/com.github.otakusenpai.alohachat.server.server.main.iml" filepath="$PROJECT_DIR$/server/com.github.otakusenpai.alohachat.server.server.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/server/com.github.otakusenpai.alohachat.server.server.test.iml" filepath="$PROJECT_DIR$/server/com.github.otakusenpai.alohachat.server.server.test.iml" />
     </modules>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="OpenJ9" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="VcsDirectoryMappings">
@@ -363,6 +368,51 @@
       <JAVADOC />
       <SOURCES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/5991ca87ef1fb5544943d9abc5a9a37583fabe03/annotations-13.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.openjfx:javafx-base:11.0.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-base/11.0.1/f1354a284f4151d20358e776f6ff68ee35bbb96d/javafx-base-11.0.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-base/11.0.1/b0224723296545d84a42eb8a4c8a6fbe01351850/javafx-base-11.0.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.openjfx:javafx-base:linux:11.0.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-base/11.0.1/4cb7db1adb33b2c0edc458917158664f0107365c/javafx-base-11.0.1-linux.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-base/11.0.1/b0224723296545d84a42eb8a4c8a6fbe01351850/javafx-base-11.0.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.openjfx:javafx-controls:linux:11.0.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-controls/11.0.1/e26db61c03faefb09030a5b7b03fa8ce55bb3d04/javafx-controls-11.0.1-linux.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-controls/11.0.1/8744d46bd669b223897dce8fbc75b78f7d661a11/javafx-controls-11.0.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.openjfx:javafx-graphics:11.0.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/11.0.1/e062cb01783effc6413abbd94d1838f6b0add209/javafx-graphics-11.0.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/11.0.1/74aca78315d801b768247cd3dec088a99bbc577/javafx-graphics-11.0.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.openjfx:javafx-graphics:linux:11.0.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/11.0.1/bcd06886f9fe50da362537eb0e779354e5c38181/javafx-graphics-11.0.1-linux.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/11.0.1/74aca78315d801b768247cd3dec088a99bbc577/javafx-graphics-11.0.1-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: org.slf4j:slf4j-api:1.7.25">
