@@ -1,6 +1,6 @@
 package com.github.otakusenpai.alohachat.base
 
-import com.github.blacknblue.alohachat.base.message_parse.ChatMsg
+import com.github.otakusenpai.alohachat.base.message_parse.ChatMsg
 
 fun main() {
     var msg1 = "Arghya@98.19.67.45:34000 0 0 Avraneel@78.67.34.87:34000 : User Avraneel has joined!!!\n"

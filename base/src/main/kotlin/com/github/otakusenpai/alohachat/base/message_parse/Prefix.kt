@@ -1,4 +1,4 @@
-package com.github.blacknblue.alohachat.base.message_parse
+package com.github.otakusenpai.alohachat.base.message_parse
 
 // Nick@IP together is called Prefix
 
@@ -16,6 +16,8 @@ class Prefix() {
         temp = temp.substring(temp.indexOf(':') + 1,temp.length)
         port  = temp
     }
+
+    override fun toString() = "$nick@$ip:$port"
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
