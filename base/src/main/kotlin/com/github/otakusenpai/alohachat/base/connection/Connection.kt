@@ -1,4 +1,4 @@
-package com.github.blacknblue.alohachat.base.connection
+package com.github.otakusenpai.alohachat.base.connection
 
 import io.ktor.network.sockets.Socket
 import kotlinx.coroutines.io.ByteReadChannel
@@ -23,6 +23,6 @@ abstract class Connection {
     open lateinit var output : ByteWriteChannel
     open lateinit var input: ByteReadChannel
     open lateinit var socket: Socket
-    open var port: Int = 6667
+    open var port: Int = 34000
     open var address: String = ""
 }

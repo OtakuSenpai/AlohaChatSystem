@@ -1,13 +1,14 @@
 package com.github.otakusenpai.alohachat.server
 
-import com.github.blacknblue.alohachat.base.connection.BasicConnection
-import com.github.blacknblue.alohachat.base.helpers.matchPrefix
-import com.github.blacknblue.alohachat.base.message_parse.ChatMsg
-import com.github.blacknblue.alohachat.base.others.Channel
+import com.github.otakusenpai.alohachat.base.client.Alohaclient
+import com.github.otakusenpai.alohachat.base.connection.BasicConnection
+import com.github.otakusenpai.alohachat.base.helpers.matchPrefix
+import com.github.otakusenpai.alohachat.base.message_parse.ChatMsg
+import com.github.otakusenpai.alohachat.base.channel.Channel
+import com.github.otakusenpai.alohachat.server.others.segragateInput
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.runBlocking
-import segragateInput
 
 object AlohaServ {
 
@@ -21,23 +22,27 @@ object AlohaServ {
 
     suspend fun passMsgToChannels(msgList: MutableList<ChatMsg>) = coroutineScope {
         // Loop through the message list
-        val one = async {
-            for(msg in msgList) {
-                // Loop through the channel list
-                for(channels in channelList)
-                // If channel receiver prefix match msg receiver prefix, then enqueue in channel msg list
-                    if(matchPrefix(msg.msgdata.receiverPrefix, (channels as Channel).senderPrefix)) {
-                        channels.messageList.enqueue(msg)
-                    }
+        try {
+            val one = async {
+                for(msg in msgList) {
+                    // Loop through the channel list
+                    for(channels in channelList)
+                    // If channel receiver prefix match msg receiver prefix, then enqueue in channel msg list
+                        if(matchPrefix(msg.msgdata.receiverPrefix, channels.channelPrefix)) {
+                            channels.messageList.add(msg)
+                        }
+                }
             }
+            one.join()
+        } catch(e: Exception) {
+            throw e
         }
-        one.join()
     }
 
 
     fun run() = runBlocking {
         var tempInput: String? = ""
-        var msgList = MutableList<ChatMsg>(0) { ChatMsg() }
+        var msgList: MutableList<ChatMsg>
         try {
             while(running) {
                 tempInput = conn.receiveUTF8Data()
@@ -46,7 +51,6 @@ object AlohaServ {
                 else {
                     msgList = segragateInput(tempInput)
                     passMsgToChannels(msgList)
-
                 }
             }
         } catch(e : Exception) {
@@ -54,10 +58,19 @@ object AlohaServ {
         }
     }
 
+    suspend fun sendChannelMsgsToClients() = coroutineScope {
+        val one = async {
+            for(channel in channelList) {
+                for(client in clientList) {
+                    if()
+                }
+            }
+        }
+    }
 
-
-    lateinit var conn : BasicConnection
-    var channelList = MutableList<Any>(0) {}
+    private lateinit var conn : BasicConnection
+    private lateinit var channelList : MutableList<Channel>
+    private lateinit var clientList : MutableList<Alohaclient>
     var serverPort = ""
     var serverIP = ""
     var serverName: String = ""
