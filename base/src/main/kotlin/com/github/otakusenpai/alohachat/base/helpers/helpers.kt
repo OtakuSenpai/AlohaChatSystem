@@ -1,5 +1,6 @@
 package com.github.otakusenpai.alohachat.base.helpers
 
+import com.github.otakusenpai.alohachat.base.message_parse.ChatMsg
 import com.github.otakusenpai.alohachat.base.message_parse.Prefix
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -97,4 +98,26 @@ fun parseStrToMsgData(data: String): MsgData {
 fun findLocalIP() : String {
     var localhost = InetAddress.getLocalHost()
     return localhost.hostAddress.trim()
+}
+
+fun ifMsgContainsQuit(msg: ChatMsg) : Boolean {
+    var found = false
+    var message = msg.msgdata.data
+    var msgList = message.split("\\s{1,}")
+    for(i in msgList) {
+        if(i.equals("/quit"))
+            found = true
+    }
+    return found
+}
+
+fun ifMsgContainsJoin(msg: ChatMsg) : Boolean {
+    var found = false
+    var message = msg.msgdata.data
+    var msgList = message.split("\\s{1,}")
+    for(i in msgList) {
+        if(i.equals("/join"))
+            found = true
+    }
+    return found
 }

@@ -5,6 +5,8 @@ import com.github.otakusenpai.alohachat.base.connection.BasicConnection
 import com.github.otakusenpai.alohachat.base.helpers.matchPrefix
 import com.github.otakusenpai.alohachat.base.message_parse.ChatMsg
 import com.github.otakusenpai.alohachat.base.channel.Channel
+import com.github.otakusenpai.alohachat.base.helpers.ifMsgContainsJoin
+import com.github.otakusenpai.alohachat.base.helpers.ifMsgContainsQuit
 import com.github.otakusenpai.alohachat.server.others.segragateInput
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
@@ -51,6 +53,11 @@ object AlohaServ {
                 else {
                     msgList = segragateInput(tempInput)
                     passMsgToChannels(msgList)
+                    sendChannelMsgsToClients()
+                    for(msg in msgList) {
+                        ifClientJoins(msg)
+                        ifClientQuits(msg)
+                    }
                 }
             }
         } catch(e : Exception) {
@@ -58,14 +65,56 @@ object AlohaServ {
         }
     }
 
-    suspend fun sendChannelMsgsToClients() = coroutineScope {
-        val one = async {
-            for(channel in channelList) {
-                for(client in clientList) {
-                    if()
+    fun ifClientJoins(msg: ChatMsg) {
+        var client1 = Alohaclient()
+        for(client in clientList) {
+            if(ifMsgContainsJoin(msg)) {
+                if(!matchPrefix(client.prefix,msg.msgdata.senderPrefix)) {
+                    client1 = Alohaclient(msg.msgdata.senderPrefix.nick,
+                        msg.msgdata.senderPrefix.ip,msg.msgdata.senderPrefix.port)
+                    clientList.add(client1)
                 }
             }
         }
+        var joined = false
+
+        for(channel in channelList) {
+            if(matchPrefix(channel.channelPrefix, msg.receiverPrefix)) {
+                channel.onJoinClient(client1)
+                joined = true
+            }
+        }
+        if(!joined) {
+            var channel = Channel(msg.msgdata.receiverPrefix.nick,msg.receiverPrefix.port.toInt())
+            channelList.add(channel)
+        }
+    }
+
+    fun ifClientQuits(msg: ChatMsg) {
+        for(i in 0 until clientList.size) {
+            if(ifMsgContainsQuit(msg))
+                if(matchPrefix(clientList[i].prefix,msg.msgdata.senderPrefix)) {
+                    for(channel in channelList) {
+                        if(channel.ifClientIsThere(msg.msgdata.senderPrefix)) {
+                            channel.onQuitClient(clientList[i])
+                        }
+                    }
+                    clientList.removeAt(i)
+                }
+        }
+        for(i in 0 until channelList.size) {
+            if(channelList[i].isEmpty())
+                channelList.removeAt(i)
+        }
+    }
+
+    suspend fun sendChannelMsgsToClients() = coroutineScope {
+        val one = async {
+            for(channel in channelList) {
+                channel.passMsgToClients()
+            }
+        }
+        one.join()
     }
 
     private lateinit var conn : BasicConnection

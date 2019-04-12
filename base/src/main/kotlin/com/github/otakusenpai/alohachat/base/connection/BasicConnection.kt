@@ -96,9 +96,9 @@ class BasicConnection: Connection {
 
     override suspend fun receiveUTF8Data(): String? {
         var data: String? = null
-        var cB = StringBuilder(512)
+        var cB = StringBuilder(10000)
         try {
-            if(!input.readUTF8LineTo(cB,512))
+            if(!input.readUTF8LineTo(cB,10000))
                 throw Exception("Error: At receiveData(): String? in " +
                         "com.github.otakusenpai.aaghora.irc.BasicConnectionKt: Didn't receive data from connection!")
             else data = cB.toString()

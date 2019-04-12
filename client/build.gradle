@@ -11,9 +11,6 @@ javafx {
     version = "11.0.1"
 }
 
-group 'com.github.otakusenpai.alohachat.client'
-version '0.1'
-
 sourceCompatibility = 1.11
 
 repositories {
@@ -22,8 +19,13 @@ repositories {
 
 dependencies {
     compile project(':base')
-
+    compile 'no.tornado:tornadofx:1.7.18'
 }
+
+
+group 'com.github.otakusenpai.alohachat.client'
+version '0.1'
+mainClassName="com.github.otakusenpai.alohachat.MainKt"
 
 compileKotlin {
     kotlinOptions.jvmTarget = "1.8"
@@ -32,7 +34,7 @@ compileKotlin {
 task fatJar(type: Jar) {
     archiveName = rootProject.name + "-client-" + version + ".jar"
     manifest {
-        attributes 'Main-Class' : 'com.github.blacknblue.AlohaChat.MainKt'
+        attributes 'Main-Class' : 'com.github.otakusenpai.alohachat.MainKt'
     }
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
